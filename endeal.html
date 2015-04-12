@@ -1,8 +1,17 @@
 <head>
     <title>Endeal</title>
+    <link type="text/css" rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+    <link type="text/css" rel="stylesheet" href="endeal.styl">
 </head>
 <body>
-    <div ng-app="endeal" ng-include="'client/views/home.ng.html'"></div>
-
+    <script src="./endeal.coffee"></script>
     <script src="./client/views/home.coffee"></script>
+    <script src="./client/views/products.coffee"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
+
+    <div ng-app="endeal" ng-include="'client/views/home.ng.html'"></div>
 </body>
