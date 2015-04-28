@@ -6,10 +6,7 @@
 
 meteor-platform
 autopublish
-insecure
-urigo:angular
 coffeescript
-chrismbeckett:toastr
 stylus
-fezvrasta:bootstrap-material-design
-ashkettle:ngmaterial
+materialize:materialize
+iron:router
