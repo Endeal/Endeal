@@ -44,3 +44,6 @@ if root.Meteor.isClient
 
     Template.patron_for_android.rendered = ->
         $('.slider').slider({full_width: false,height:600})
+
+    Template.jobs.rendered = ->
+        $('.collapsible').collapsible({accordion:false})
