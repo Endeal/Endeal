@@ -23,9 +23,9 @@ if root.Meteor.isClient
         this.render 'page'
         this.render 'jobs', {to: 'content'}
 
-    Router.route '/products/patron-for-android', ->
+    Router.route '/products/patron', ->
         this.render 'page'
-        this.render 'patron_for_android', {to: 'content'}
+        this.render 'patron', {to: 'content'}
 
     Router.route '/products/patron-for-ios', ->
         this.render 'page'
@@ -42,7 +42,7 @@ if root.Meteor.isClient
     Template.intro.rendered = ->
         $('.slider').slider({full_width: true})
 
-    Template.patron_for_android.rendered = ->
+    Template.patron.rendered = ->
         $('.slider').slider({full_width: false,height:600})
 
     Template.jobs.rendered = ->
