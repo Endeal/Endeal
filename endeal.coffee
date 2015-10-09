@@ -27,13 +27,9 @@ if root.Meteor.isClient
         this.render 'page'
         this.render 'patron', {to: 'content'}
 
-    Router.route '/products/patron-for-ios', ->
+    Router.route '/products/vendor', ->
         this.render 'page'
-        this.render 'patron_for_ios', {to: 'content'}
-
-    Router.route '/products/vendor-for-ios', ->
-        this.render 'page'
-        this.render 'vendor_for_ios', {to: 'content'}
+        this.render 'vendor', {to: 'content'}
 
     # Document Ready
     Template.page.rendered = ->
@@ -43,7 +39,7 @@ if root.Meteor.isClient
         $('.slider').slider({full_width: true})
 
     Template.patron.rendered = ->
-        $('.slider').slider({full_width: false,height:600})
+        $('.slider').slider({full_width: false,height:450})
 
     Template.jobs.rendered = ->
         $('.collapsible').collapsible({accordion:false})
