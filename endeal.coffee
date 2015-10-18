@@ -27,9 +27,30 @@ if root.Meteor.isClient
         this.render 'page'
         this.render 'patron', {to: 'content'}
 
+    Router.route '/products/patron/privacy-policy', ->
+        this.render 'page'
+        this.render 'patronPrivacyPolicy', {to: 'content'}
+
+    Router.route '/products/patron/terms-of-service', ->
+        this.render 'page'
+        this.render 'patronTermsOfService', {to: 'content'}
+
     Router.route '/products/vendor', ->
         this.render 'page'
         this.render 'vendor', {to: 'content'}
+        this.render 'vendorSummary', {to: 'tabSummary'}
+        this.render 'vendorFeatures', {to: 'tabFeatures'}
+        this.render 'vendorHardware', {to: 'tabHardware'}
+        this.render 'vendorPrice', {to: 'tabPrice'}
+        this.render 'vendorHelp', {to: 'tabHelp'}
+
+    Router.route '/products/vendor/privacy-policy', ->
+        this.render 'page'
+        this.render 'patronPrivacyPolicy', {to: 'content'}
+
+    Router.route '/products/vendor/terms-of-service', ->
+        this.render 'page'
+        this.render 'patronTermsOfService', {to: 'content'}
 
     # Document Ready
     Template.page.rendered = ->
@@ -39,7 +60,12 @@ if root.Meteor.isClient
         $('.slider').slider({full_width: true})
 
     Template.patron.rendered = ->
-        $('.slider').slider({full_width: false,height:450})
+        $('.slider').slider({full_width: false,height:563})
+        $('.materialboxed').materialbox()
+
+    Template.vendor.rendered = ->
+        $('ul.tabs').tabs()
+        $('.slider').slider({full_width: false,height:563})
 
     Template.jobs.rendered = ->
         $('.collapsible').collapsible({accordion:false})

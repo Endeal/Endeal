@@ -1,115 +1,31 @@
 <template name="vendor">
     <div class="container">
         <h2>Vendor</h2>
-        <!--
-        <div class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="/images/vendor-for-ios-1.png"/>
-                </li>
-                <li>
-                    <img src="/images/vendor-for-ios-2.png"/>
-                </li>
-                <li>
-                    <img src="/images/vendor-for-ios-3.png"/>
-                </li>
-                <li>
-                    <img src="/images/vendor-for-ios-4.png"/>
-                </li>
-            </ul>
+        <div class="row">
+            <div class="col s12">
+                <ul class="blue-grey lighten-2 tabs z-depth-2">
+                    <li class="tab col s3">
+                        <a class="active amber-text text-lighten-3" href="#summary">Summary</a>
+                    </li>
+                    <li class="tab col s3 amber-text text-lighten-3">
+                        <a class="amber-text text-lighten-3" href="#features">Features</a>
+                    </li>
+                    <li class="tab col s3 amber-text text-lighten-3">
+                        <a class="amber-text text-lighten-3" href="#hardware">Hardware</a>
+                    </li>
+                    <li class="tab col s3 amber-text text-lighten-3">
+                        <a class="amber-text text-lighten-3" href="#price">Price</a>
+                    </li>
+                    <li class="tab col s3 amber-text text-lighten-3">
+                        <a class="amber-text text-lighten-3" href="#help">Help</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        -->
-        <div class="section">
-            <h5>Description</h5>
-            <p class="flow-text">
-            There are a lot of point of sales systems out there that do a lot of different things,
-            but none can provide what we provide. The term point-of-sales refers to the fact that
-            the terminal becomes the spot where sales happen for your business. But Vendor is a
-            full blown sales platform- being a point of sales system is just one of its features.
-            <br/><br/>
-            Vendor probably has everything you want out of your traditional POS system- menu and
-            order management, sales and financial data, employee management & restricted access,
-            support for the traditional bevy of equipment (receipt printers, cash drawers, credit/debit
-            card readers)- but where it really looks to send your business to the next level is with
-            its Patron app integration.
-            <br/><br/>
-            Patron is an app for consumers that gets you connected directly to them. Instead of relying
-            on an army of front-counter employees to manage customer money, feedback, administrate reward
-            systems and coupon promotions, why not let technology do it for you? Customers relish in
-            the time and convenience of being able to buy from right from their phone, and you save
-            costs on employees and managing a series of fragmented systems.
-            <br/><br/>
-            In addition to potentially changing the way customers purchase from your business,
-            we can offer deeper analysis of consumer purchases over than anyone else can, because we
-            can distinguish any purchase made through Patron at a personalized level. Figure out specific
-            customer needs, whether it be their addiction to your grilled cheese sandwiches being
-            doubled when you start sending them coupons for it or by discovering they stopped
-            buying sodas from you when you raised the price 25 cents.
-            <br/><br/>
-            Lots more is on the horizon for Vendor, so stay tuned!
-            </p>
-        <div class="divider"></div>
-        </div>
-        <div class="section">
-            <h5>Requirements</h5>
-            <p>Bank account to receive payment<br/>
-            Optional QR Code scanner to allow for customer validation<br/>
-            Optional Powered USB Hub with 5+ ports to support attachments<br/>
-            Optional USB card reader for allowing purchases from debit/credit card swipes<br/>
-            Optional bluetooth thermal printer for printing receipts<br/>
-            Optional cash drawer for automatic drawer opening<br/>
-            </p>
-            <div class="divider"></div>
-        </div>
-        <div class="section">
-            <h5>Version</h5>
-            <p>1</p>
-            <div class="divider"></div>
-        </div>
-        <div class="section">
-            <h5>Price</h5>
-            <p>Free to Download and Create Account<br/>
-            2.65% fee per card swipe<br/>
-            3.0% + $0.30 per app-based transaction<br/>
-            </p>
-            <div class="divider"></div>
-        </div>
-        <div class="section">
-            <h5>Platforms</h5>
-            <p>
-            &bull; iOS 6.0+ (Coming soon)
-            </p>
-            <div class="divider"></div>
-        </div>
-        <div class="section">
-            <h5>Links</h5>
-            <!--
-            <a href="www.google.com">Download from App Store</a><br/>
-            -->
-            <a href="www.endeal.me/products/vendor/privacy-policy">Privacy Policy</a><br/>
-            <a href="www.endeal.me/products/vendor/terms-of-use">Terms of Use</a>
-            <div class="divider"></div>
-        </div>
-        <div class="section">
-            <h5>Support</h5>
-            <p>E-mail: <a href="mailto:admin@endeal.me">admin@endeal.me</a><br/>
-            Phone: (805) 416-6912
-            </p>
-            <div class="divider"></div>
-        </div>
-        <div class="section">
-            <h5>FAQ</h5>
-        </div>
+        <div id="summary" class="col s12">{{> yield "tabSummary"}}</div>
+        <div id="features" class="col s12">{{> yield "tabFeatures"}}</div>
+        <div id="hardware" class="col s12">{{> yield "tabHardware"}}</div>
+        <div id="price" class="col s12">{{> yield "tabPrice"}}</div>
+        <div id="help" class="col s12">{{> yield "tabHelp"}}</div>
     </div>
 </template>
-
-<!--
-    Vendor app, need to sell it here:
-
-    Features
-    Hardware
-    Media
-    Price
-    Get
-
-    -->
